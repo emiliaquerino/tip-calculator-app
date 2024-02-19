@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="style.css" rel="stylesheet" />
-  <script src="script.js"></script>
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-</head>
-<body>
-  <logo>
-    <img src="./images/logo.svg" alt="logo"/>
-  </logo>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js"></script>
 
-  Bill
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <logo>
+      <img src="./images/logo.svg" alt="logo" />
+    </logo>
+    <div class="container">
+      <section class="bill">
+        <h5>Bill</h5>
+        <input type="number" placeholder="0" />
+      </section>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      <section class="tip-selector">
+        <h6>Select Tip %</h6>
+        <button>5%</button>
+        <button>10%</button>
+        <button>15%</button>
+        <button>25%</button>
+        <button>50%</button>
+        <input type="number" placeholder="Custom" />
+      </section>
 
-  Number of People
+      <section class="number-people">
+        <h6>Number of People</h6>
+        <input type="number" placeholder="0" />
+      </section>
 
-  Tip Amount
-  / person
+      <section class="total">
+        <h6>Tip Amount<br><small>/ person</small></h6>
+        <h6>Total<br><small>/ person</small></h6>
+        <button>RESET</button>
+      </section>
 
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    </div>
+  </body>
 </html>

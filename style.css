@@ -41,6 +41,7 @@
     background-color: var(--very-light-grayish-cyan);
     color: var(--very-dark-cyan);
     padding: 1rem;
+    border-radius: 10px;
   }
   
   .container {

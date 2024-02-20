@@ -29,6 +29,14 @@ logo {
 
 input {
     font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--very-dark-cyan);
+    padding: 1rem;
 }
 
 .container {

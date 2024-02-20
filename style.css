@@ -12,9 +12,15 @@
 
 body {
     font-family: 'Space Mono', monospace;
-    background-color: var(--very-light-grayish-cyan);
+    background-color: var(--light-grayish-cyan);
 }
 
 input {
     font-size: 24px;
 }
+
+logo {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 2rem 0;
+    }

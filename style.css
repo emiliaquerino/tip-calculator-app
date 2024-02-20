@@ -34,6 +34,7 @@
     font-size: 24px;
     font-weight: 700;
     text-align: right;
+    font-family: 'space mono', monospace;
     width: 100%;
     border: none;
     outline: none;
@@ -68,6 +69,7 @@
     color: var(--white);
     font-size: 24px;
     font-weight: 700;
+    font-family: 'Space Mono', monospace;
     border: none;
     border-radius: 10px;
     padding: 1rem;

@@ -40,7 +40,7 @@
     border: none;
     outline: none;
     background-color: var(--very-light-grayish-cyan);
-    padding: 1rem;
+    padding:0rem 1rem;
     border-radius: 5px;
   }
 
@@ -57,18 +57,18 @@
   }
 
   .input-icon-bill, .input-icon-number-people {
-    background-size: 0.8rem; 
+    background-size: 0.6rem; 
     background-repeat: no-repeat;
     background-position: 1rem center;
   }
-  
+
   .container {
     background-color: var(--white);
     border-radius: 20px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   
   .tip-section {

@@ -40,9 +40,26 @@
     border: none;
     outline: none;
     background-color: var(--very-light-grayish-cyan);
-    color: var(--very-dark-cyan);
     padding: 1rem;
     border-radius: 5px;
+  }
+
+  input::-webkit-input-placeholder {
+    color: var(--very-dark-cyan); 
+}
+
+  .input-icon-bill {
+    background-image: url('images/icon-dollar.svg'); 
+  }
+
+  .input-icon-number-people {
+    background-image: url('images/icon-person.svg'); 
+  }
+
+  .input-icon-bill, .input-icon-number-people {
+    background-size: 0.8rem; 
+    background-repeat: no-repeat;
+    background-position: 1rem center;
   }
   
   .container {

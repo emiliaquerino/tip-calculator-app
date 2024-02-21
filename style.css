@@ -87,16 +87,17 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     background-color: var(--very-dark-cyan);
     color: var(--white);
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 10px;
   }
 
   .display-tip-amount, .display-total {
     text-align: right;
     color: var(--strong-cyan);
+    font-size: 30px;
   }
 
   .total-section button{
@@ -110,4 +111,8 @@
     border-radius: 5px;
     padding: 0.5rem;
     cursor: pointer;
+  }
+
+  .total-section h5 {
+    color: var(--white);
   }

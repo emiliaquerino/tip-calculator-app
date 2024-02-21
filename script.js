@@ -1,6 +1,11 @@
+const tipButtons = document.querySelectorAll('.tip-button');
+const resetButton = document.querySelector('.reset-button');
+
 let billValue = 0;
 let numberOfPeople = 0;
 let total = 0;
+
+
 
 document.getElementById("input1").addEventListener("input", function (event) {
   billValue = parseFloat(this.value);
@@ -40,4 +45,23 @@ function calculateSelectedTip(percentage) {
 
 document.getElementById("input2").addEventListener("input", function (event) {
   numberOfPeople = parseFloat(this.value);
+});
+
+tipButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    tipButtons.forEach(btn => {
+      btn.classList.remove('clicked');
+    });
+    button.classList.add('clicked');
+  });
+});
+
+//corrigir isso
+resetButton.forEach(button => {
+  button.addEventListener('click', () => {
+    resetButton.forEach(btn => {
+      btn.classList.remove('clicked');
+    });
+    button.classList.add('clicked');
+  });
 });

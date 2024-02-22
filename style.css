@@ -28,6 +28,7 @@
   }
 
   h5 {
+    display: inline-block;
     color: var(--dark-grayish-cyan);
     margin-top: 1.5rem;
   }
@@ -151,7 +152,11 @@
     opacity: 1;
   }
   
-  
+  #number-of-people-error {
+    display: inline-block;
+    margin-left: 2rem;
+    color: red;
+}
 
   /*----responsive design----*/
 

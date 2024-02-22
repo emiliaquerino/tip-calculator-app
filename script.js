@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       displayTipAmount.textContent = "$0.00";
       displayTotal.textContent = "$0.00";
       numberOfPeopleInput.style.border = "2px solid red";
-      document.getElementById("number-of-people-error").textContent = "Number of people can't be zero";
+      document.getElementById("number-of-people-error").textContent = "Can't be zero";
       return;
     } else {
       numberOfPeopleInput.style.border = "";

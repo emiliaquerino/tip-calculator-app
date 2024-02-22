@@ -16,25 +16,26 @@
       <div class="content">
         <section class="bill-section">
           <h5>Bill</h5>
-          <input type="number" placeholder="0" class="input-icon-bill" id="input1" />
+          <input type="text" placeholder="0" class="input-icon-bill" id="bill-value" />
         </section>
-  
+
         <section class="tip-section">
           <h5>Select Tip %</h5>
-          <button id="button5" class="tip-button">5%</button>
-          <button id="button10" class="tip-button">10%</button>
-          <button id="button15" class="tip-button">15%</button>
-          <button id="button25" class="tip-button">25%</button>
-          <button id="button50" class="tip-button">50%</button>
-          <input class="tip-input" type="number" placeholder="Custom" />
+          <button id="button5" data-percentage="5" class="tip-button">5%</button>
+          <button id="button10" data-percentage="10" class="tip-button">10%</button>
+          <button id="button15" data-percentage="15" class="tip-button">15%</button>
+          <button id="button25" data-percentage="25" class="tip-button">25%</button>
+          <button id="button50" data-percentage="50" class="tip-button">50%</button>
+          <input class="custom-percentage" type="text" placeholder="Custom" />
         </section>
-  
+
         <section class="number-people-section" id="input2">
           <h5>Number of People</h5>
-          <input type="number" placeholder="0" class="input-icon-number-people" />
-        </section>      
+          <div id="number-of-people-error" style="color: red;"></div>
+          <input type="text" placeholder="0" class="input-icon-number-people number-of-people" />
+        </section>
       </div>
-      
+
       <section class="total-section">
         <h5>Tip Amount<br><small>/ person</small></h5>
         <h1 class="display-tip-amount">$0.00</h1>
@@ -44,6 +45,6 @@
       </section>
 
     </div>
-    <script src="script.js" defer></script>
+    <script src="script2.js" defer></script>
   </body>
 </html>

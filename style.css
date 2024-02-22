@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   :root {
     --strong-cyan: hsl(172, 67%, 45%);
     --very-dark-cyan: hsl(183, 100%, 15%);
@@ -15,23 +15,23 @@
     --very-light-grayish-cyan: hsl(189, 41%, 97%);
     --white: hsl(0, 0%, 100%);
   }
-  
+
   body {
     font-family: 'Space Mono', monospace;
     background-color: var(--light-grayish-cyan);
   }
-  
+
   logo {
     display: flex;
     justify-content: center;
     margin: 3rem 0 2rem 0;
   }
-  
+
   h5 {
     color: var(--dark-grayish-cyan);
     margin-top: 1.5rem;
   }
-  
+
   input {
     font-size: 24px;
     font-weight: 700;
@@ -46,19 +46,19 @@
   }
 
   input::-webkit-input-placeholder {
-    color: var(--very-dark-cyan); 
+    color: var(--very-dark-cyan);
 }
 
   .input-icon-bill {
-    background-image: url('images/icon-dollar.svg'); 
+    background-image: url('images/icon-dollar.svg');
   }
 
   .input-icon-number-people {
-    background-image: url('images/icon-person.svg'); 
+    background-image: url('images/icon-person.svg');
   }
 
   .input-icon-bill, .input-icon-number-people {
-    background-size: 0.6rem; 
+    background-size: 0.6rem;
     background-repeat: no-repeat;
     background-position: 1rem center;
   }
@@ -71,21 +71,20 @@
     flex-direction: column;
     gap: 1.5rem;
   }
-  
+
   .tip-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .tip-section h5 {
-    grid-column: 1 / span 2; 
-/* Ocupa duas colunas, começando na primeira. */
+    grid-column: 1 / span 2;
   }
-  
+
   .tip-section button {
-    grid-column: span 1; /* Ocupa uma coluna, começando na próxima disponível. */
+    grid-column: span 1; 
     background-color: var(--very-dark-cyan);
     color: var(--white);
     font-size: 24px;
@@ -98,8 +97,8 @@
   }
 
   .tip-section .tip-input {
-    padding: 0.5rem; /* Aqui está o padding maior que você quer aplicar. */
-  }  
+    padding: 0.5rem; 
+  }
 
   .total-section {
     display: grid;
@@ -141,19 +140,19 @@
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   }
-  
+
   .tip-button:hover, .reset-button:hover {
     background-color: var(--strong-cyan);
   }
-  
+
   .tip-button.clicked {
     background-color: var(--strong-cyan);
   }
 
   /*----responsive design----*/
 
-  @media screen and (min-width: 860px) { /* medium dispositivies */
-    
+  @media screen and (min-width: 860px) {
+
     logo{
       margin: 10rem 0 2rem 0;
     }
@@ -191,7 +190,7 @@
     .tip-section button,.tip-input {
       padding: 0.5rem;
       font-size: 20px;
-    }  
+    }
 
     .total-section {
       width: 50%;

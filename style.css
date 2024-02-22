@@ -196,9 +196,14 @@
       grid-column: 1 / span 3;
     }
 
-    .tip-section button,.tip-input {
+    .tip-section button {
       padding: 0.5rem;
       font-size: 20px;
+    }
+
+    .tip-section input  {
+      padding: 0.5rem;
+      font-size: 18px;
     }
 
     .total-section {

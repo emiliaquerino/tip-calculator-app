@@ -120,9 +120,7 @@
   .total-section button{
     grid-column: span 2;
     background-color: var(--strong-cyan);
-    color: var(--very-dark-cyan);
-    font-size: 24px;
-    font-weight: 700;
+    opacity: 0.1;
     font-family: 'Space Mono', monospace;
     border: none;
     border-radius: 5px;
@@ -141,13 +139,19 @@
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   }
 
-  .tip-button:hover, .reset-button:hover {
+  .tip-button:hover {
     background-color: var(--strong-cyan);
   }
 
   .tip-button.clicked {
     background-color: var(--strong-cyan);
   }
+
+  .reset-button:hover {
+    opacity: 1;
+  }
+  
+  
 
   /*----responsive design----*/
 

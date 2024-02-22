@@ -1,67 +1,77 @@
-const tipButtons = document.querySelectorAll('.tip-button');
-const resetButton = document.querySelector('.reset-button');
+document.addEventListener("DOMContentLoaded", function () {
+  const billInput = document.getElementById("bill-value");
+  const tipButtons = document.querySelectorAll(".tip-button");
+  const customTipInput = document.querySelector(".custom-percentage");
+  const numberOfPeopleInput = document.querySelector(".number-of-people");
+  const displayTipAmount = document.querySelector(".display-tip-amount");
+  const displayTotal = document.querySelector(".display-total");
+  const resetButton = document.querySelector(".reset-button");
 
-let billValue = 0;
-let numberOfPeople = 0;
-let total = 0;
+  let selectedTipButton = null;
 
+  function calculateTipAndTotal() {
+    const billAmount = parseFloat(billInput.value);
+    const tipPercentage = customTipInput.value
+      ? parseFloat(customTipInput.value)
+      : selectedTipButton.dataset.percentage;
+    const numberOfPeople = parseInt(numberOfPeopleInput.value);
 
+    if (isNaN(billAmount) || isNaN(tipPercentage) || isNaN(numberOfPeople)) {
+      return;
+    }
 
-document.getElementById("input1").addEventListener("input", function (event) {
-  billValue = parseFloat(this.value);
-});
+    const tipAmount = (billAmount * tipPercentage) / 100;
+    const totalPerPerson = (billAmount + tipAmount) / numberOfPeople;
 
-document.getElementById("button5").addEventListener("click", function (event) {
-  calculateSelectedTip(0.05);
-});
+    if (numberOfPeople === 0) {
+      displayTipAmount.textContent = "$0.00";
+      displayTotal.textContent = "$0.00";
+      numberOfPeopleInput.style.border = "2px solid red";
+      document.getElementById("number-of-people-error").textContent =
+        "Number of people can't be zero";
+      return;
+    } else {
+      numberOfPeopleInput.style.border = "";
+      document.getElementById("number-of-people-error").textContent = "";
+    }
 
-document.getElementById("button10").addEventListener("click", function (event) {
-  calculateSelectedTip(0.1);
-});
+    displayTipAmount.textContent = `$${(tipAmount / numberOfPeople).toFixed(
+      2
+    )}`;
+    displayTotal.textContent = `$${totalPerPerson.toFixed(2)}`;
+  }
 
-document.getElementById("button15").addEventListener("click", function (event) {
-  calculateSelectedTip(0.15);
-});
+  function resetCalculator() {
+    billInput.value = "";
+    customTipInput.value = "";
+    numberOfPeopleInput.value = "";
 
-document.getElementById("button25").addEventListener("click", function (event) {
-  calculateSelectedTip(0.25);
-});
+    displayTipAmount.textContent = "$0.00";
+    displayTotal.textContent = "$0.00";
 
-document.getElementById("button50").addEventListener("click", function (event) {
-  calculateSelectedTip(0.5);
-});
+    numberOfPeopleInput.style.border = "";
 
-document
-  .querySelector(".tip-input")
-  .addEventListener("input", function (event) {
-    calculateSelectedTip(parseFloat(this.value) / 100);
-  });
+    selectedTipButton = null;
 
-function calculateSelectedTip(percentage) {
-  let percentageValue = billValue * percentage;
-  let tipAmount = percentageValue / numberOfPeople;
-  document.querySelector('.display-tip-amount').textContent = `$${tipAmount.toFixed(2)}`;
-}
+    document.getElementById("number-of-people-error").textContent = "";
 
-document.getElementById("input2").addEventListener("input", function (event) {
-  numberOfPeople = parseFloat(this.value);
-});
-
-tipButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    tipButtons.forEach(btn => {
-      btn.classList.remove('clicked');
+    tipButtons.forEach(function (button) {
+      button.classList.remove("clicked");
     });
-    button.classList.add('clicked');
-  });
-});
+  }
 
-//corrigir isso
-resetButton.forEach(button => {
-  button.addEventListener('click', () => {
-    resetButton.forEach(btn => {
-      btn.classList.remove('clicked');
+  tipButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      tipButtons.forEach(function (btn) {
+        btn.classList.remove("clicked");
+      });
+      this.classList.add("clicked");
+      selectedTipButton = this;
+      calculateTipAndTotal();
     });
-    button.classList.add('clicked');
   });
+
+  customTipInput.addEventListener("input", calculateTipAndTotal);
+  numberOfPeopleInput.addEventListener("input", calculateTipAndTotal);
+  resetButton.addEventListener("click", resetCalculator);
 });

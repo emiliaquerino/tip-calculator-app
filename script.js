@@ -27,17 +27,14 @@ document.addEventListener("DOMContentLoaded", function () {
       displayTipAmount.textContent = "$0.00";
       displayTotal.textContent = "$0.00";
       numberOfPeopleInput.style.border = "2px solid red";
-      document.getElementById("number-of-people-error").textContent =
-        "Number of people can't be zero";
+      document.getElementById("number-of-people-error").textContent = "Number of people can't be zero";
       return;
     } else {
       numberOfPeopleInput.style.border = "";
       document.getElementById("number-of-people-error").textContent = "";
     }
 
-    displayTipAmount.textContent = `$${(tipAmount / numberOfPeople).toFixed(
-      2
-    )}`;
+    displayTipAmount.textContent = `$${(tipAmount / numberOfPeople).toFixed(2)}`;
     displayTotal.textContent = `$${totalPerPerson.toFixed(2)}`;
   }
 
@@ -45,16 +42,11 @@ document.addEventListener("DOMContentLoaded", function () {
     billInput.value = "";
     customTipInput.value = "";
     numberOfPeopleInput.value = "";
-
     displayTipAmount.textContent = "$0.00";
     displayTotal.textContent = "$0.00";
-
     numberOfPeopleInput.style.border = "";
-
     selectedTipButton = null;
-
     document.getElementById("number-of-people-error").textContent = "";
-
     tipButtons.forEach(function (button) {
       button.classList.remove("clicked");
     });
